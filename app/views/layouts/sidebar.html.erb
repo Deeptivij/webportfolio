@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sjal</title>
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= 'videopage' if controller_name == 'videos'||controller_name == 'poems'||controller_name == 'pictures'||controller_name == 'lyrics'||controller_name == 'recent'%> <%= 'homepage' if controller_name == 'home'%>" >
+  
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        
+        <li>
+         <div id="template-logo" class="template-logo" data-href="#portfolio.html"><span class="logo" id="logo">Sj&auml;l</span><br><span class="logo1">Alfaaz Mere</span><br>
+          <span class="logo1" align="center">Feelings Inside.</span></div>
+        </li>
+        <div class="menu-container"id="navbar1">                
+          <li>
+
+          </li>
+          <li>
+            <div class="menu-option-text"id="a"><%=link_to 'HOME',home_index_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+          </li>
+          <li>
+            <div class="menu-option-text"id="a"><%=link_to 'ABOUT POET',about_us_home_index_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+          </li>
+          <li>
+           <div class="menu-option-text"id="a"><%=link_to 'PROJECTS',videos_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+       </li>
+       <li>
+           <div class="menu-option-text"id="a"><%=link_to 'READS',lyrics_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+       </li>
+       <li>
+        <div class="menu-option-text"id="a"><%=link_to 'GALLERY',pictures_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+      </li>
+      <li>
+        <div class="menu-option-text"id="a"><%=link_to 'CONTACT US',contact_us_home_index_path,class:'hvr-sweep-to-left',style:"color: rgb(255, 255, 255);"%></div>
+      </li>
+
+      <li>
+       
+      </div>
+      <div class="icons">
+        <div id="social">
+          <a class="facebookBtn smGlobalBtn" href="#" ></a>
+          <a class="twitterBtn smGlobalBtn" href="#" ></a>
+          <a class="googleplusBtn smGlobalBtn" href="#" ></a>
+          <a class="linkedinBtn smGlobalBtn" href="#" ></a>
+        </div>
+        <div class="menu-option-text"><a href="#portfolio.html" data-path-href="html/portfolio/" style="color: rgb(255, 255, 255);">@Copyright codewizards.in</a></div>
+      </div>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <div id="menu-toggle"></div>
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+
+          <%=yield%>
+        </div>
+      </body>
+      <script>
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          
+          $("#wrapper").toggleClass("toggled");
+        });
+        $(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("selected");
+               }
+       });
+});
+      </script>
+      </html>

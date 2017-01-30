@@ -1,0 +1,71 @@
+<div class="wrapper">
+<% if @lyrics.any? %>
+  <div class="gallerycontain">
+    <div class="col-md-2 col-xs-3 col-sm-3 col-lg-2 hiddenbuttons">
+    </div>
+    <div class="col-md-10 col-xs-9 col-sm-9 col-lg-10 gallery polaroid">
+<% @lyrics.in_groups_of(3) do |group| %>
+              <% group.each do |p| %>
+                <% if p %>
+                  <div>
+              <div class="col-md-3 col-xs-12 col-sm-6 col-lg-3 photoplace views views-first">
+                <%= link_to image_tag("op1inverted.png",
+                                class: 'media-object'),
+                      lyric_path(p), target: '_blank' %>
+
+                    <p align="center"class="maskk"><%= p.title %></p><br>
+                    <p align="center"class="maskk1"><%= p.description %></p>
+
+              </div>
+                <% end %>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+  </div>
+<% end %>
+</div>
+<style>
+
+.views {
+  float: left;
+   border: 2px solid black;
+   overflow: hidden;
+   position: relative;
+   height: 215px;
+   text-align: center;
+   /* -webkit-box-shadow: 1px 1px 2px #e6e6e6; */
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   /* box-shadow: 1px 1px 2px #e6e6e6; */
+   cursor: pointer;
+   /* background: #fff url(../images/bgimg.jpg) no-repeat center center; */
+
+}
+
+.maskk{
+   position: absolute;
+   overflow: hidden;
+   top: 20px;
+   left: 0;
+
+}
+.maskk1{
+   position: absolute;
+   overflow: hidden;
+   top: 60px;
+     left: 1px;
+
+}
+
+.views p {
+  width: 80%;
+      font-style: italic;
+      font-size: 17px;
+   word-wrap: break-word;
+   position: absolute;
+    color:#202121;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+
+</style>

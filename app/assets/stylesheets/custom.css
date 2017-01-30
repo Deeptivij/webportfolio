@@ -1,0 +1,919 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+#social {
+  text-align: center;
+  margin: 20px;
+}
+@media (min-width: 300px){
+  .in {
+        margin-left: 4px;
+    z-index: 1;
+    position: relative;
+}
+.sort {
+    width: 15px;
+}
+}
+@media (min-width: 992px){
+.in{
+ 
+     margin-left: 159px;
+    margin-top: 14px;
+    z-index: 1;
+    position: relative;
+}
+.out{
+   margin-left: -32px;
+    margin-top: -13px;
+}
+}
+
+.inside{
+  padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    background-color: rgba(245, 245, 245, 0.85);
+}
+
+.smGlobalBtn{ /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    box-shadow: 0 2px 2px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+}
+
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+}
+
+/* twitter button class*/
+.twitterBtn{
+    background: #00ABE3;
+}
+
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+}
+
+.twitterBtn:hover{
+      color: #00ABE3;
+      background: #fff;
+}
+
+/* google plus button class*/
+.googleplusBtn{
+    background: #e64522;
+}
+
+.googleplusBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d5"; /* add googleplus icon */
+}
+
+.googleplusBtn:hover{
+      color: #e64522;
+      background: #fff;
+}
+
+/* linkedin button class*/
+.linkedinBtn{
+    background: #0094BC;
+}
+
+.linkedinBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover{
+      color: #0094BC;
+      background: #fff;
+}
+
+/* pinterest button class*/
+.pinterestBtn{
+    background: #cb2027;
+}
+
+.pinterestBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d2"; /* add pinterest icon */
+}
+body{
+  background: whitesmoke;
+}
+/*galler css*/
+.gallerycontain{
+  margin-top: 0px;
+      margin-left: 17px;
+}
+.gallery{margin-top: 22px;
+overflow-y: auto;}
+.photoplace{
+  padding-left: 0px;
+  padding-right: 0px;
+  border:2px solid black;
+}
+.media-object{width: 100%;
+margin-right: 0px;
+padding: 0px;
+height:215px;}
+.media-poem{
+  width: 200px;
+height:152px;
+}
+.lyrics-media-object{width: 50%;
+margin-right: 0px;
+padding: 0px;
+height:100px;}
+/*
+sidebar drop down menu
+*/
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+
+  color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  color: rgb(255, 255, 255);
+  font-family: PT Sans Caption;
+    font-size: px;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+/*poem page styling*/
+.thumbnails {
+    display: block;
+    padding: 4px;
+    margin-bottom: 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .poemimg{
+    height: 125px;
+    width: 240px;
+  }
+.captions{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 15px;
+  /* letter-spacing: 1px; */
+  color: rgb(141, 144, 144);
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+}
+.cont{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.outer{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.c
+.picturess{
+  margin-top: 0px;
+  margin-left: -4px;
+    height: 208px;
+  border:2px solid grey;
+}
+.containss{
+  positon:fixed;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+#player-wrapper{
+  margin-top: 55px;
+}
+.playlistt{
+overflow-y: auto;
+margin-top: 22px;
+}
+/*videopage styling*/
+.thumbs {
+    display: block;
+    padding: 4px;
+    margin-bottom: -10px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+#home-wrapper{
+position: fixed;
+top:0px;
+
+}
+
+.picture{
+  margin-top: 20px;
+  margin-left: -4px;
+    height: 208px;
+  border:2px solid grey;
+}
+.contains{
+  positon:fixed;
+  margin-top: 0px;
+}
+#player-wrapper{
+
+  margin-top: 55px;
+}
+
+.playlist::-webkit-scrollbar {
+    width: 1em;
+}
+ .playlist::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.playlist::-webkit-scrollbar-thumb {
+  background-color:  #1fb5ad;
+  outline: 1px solid slategrey;
+}
+/*sidebar.html.erb styling*/
+.videopage{
+  background: black;
+}
+
+.about{
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#menu-hider-icon {
+    position: absolute;
+    left: 212px;
+    top: -157px;
+    height: 30px;
+    width: 20px;
+    background-color: #1fb5ad;;
+    background-image: url(/assets/more.png);
+    background-position: -268px -209px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+.pinterestBtn:hover{
+      color: #cb2027;
+      background: #fff;
+}
+
+/* tumblr button class*/
+.tumblrBtn{
+    background: #3a5876;
+}
+
+.tumblrBtn:before{
+      font-family: "FontAwesome";
+      content: "\f173"; /* add tumblr icon */
+}
+
+.tumblrBtn:hover{
+      color: #3a5876;
+      background: #fff;
+}
+
+/* rss button class*/
+.rssBtn{
+    background: #e88845;
+}
+.rssBtn:before{
+      font-family: "FontAwesome";
+      content: "\f09e"; /* add rss icon */
+}
+
+.rssBtn:hover{
+      color: #e88845;
+      background: #fff;
+}
+.container{
+  margin-left: 80px;
+}
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1fb5ad;;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.hvr-sweep-to-left:active{
+  background:#1fb5ad;;
+}
+html, body {
+        height: 100%;
+        margin: 0px;
+}
+
+.template-logo {
+    clear: both;
+    position: relative;
+    float: left;
+    width: 140px;
+    height: 90px;
+    margin: 28px 0 28px -70px;
+    z-index: 8;
+    left: 50%;
+    cursor: pointer;
+}
+
+  
+
+    .menu-option-text a, .menu-option-sign, .sub-menu-option-text a, .smartphone-option-text a {
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        font-family: PT Sans Caption;
+        font-size: 16px;
+        /* letter-spacing: 1px; */
+        color: #8D9090;
+        overflow: hidden;
+        text-decoration: none;
+        outline: none;
+    }
+    .menu-option-text, .sub-menu-option-text {
+    width: 210px;
+}
+.nav{
+  width:230px;
+  position:relative;
+  height:100%;
+  border-right:3px solid #1fb5ad;
+   position: fixed;
+   margin-top: 0px;
+}
+.homenav{
+  width:230px;
+  position:relative;
+  height:100%;
+  border-right:3px solid #1fb5ad;;
+   position: fixed;
+   margin-top: 0px;
+}
+.text1{
+  margin-top: 50px;
+}
+.menu-container{
+  max-height:inherit;
+clear: both;
+    position: relative;
+    float: left;
+    padding: 0;
+    z-index: 9;
+}
+.menu-container, .menu-option-holder, .menu-option-background-selected, .menu-option-text, .sub-menu-option-text {
+    width: 210px;
+}
+@media (min-width: 300px){
+  
+.logo {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 60px;}
+.logo1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 23px;}
+.template-logo {
+    margin: 28px 0 28px -70px;}
+.menu-container {
+    margin: 0 0 0 20px;
+    margin-top: 45px;
+max-height:inherit;
+clear: both;
+    position: relative;
+}
+.homepage-title {
+    position: fixed;
+    top: 20%;
+    left: 8%;
+}
+.single-liner{
+  font-size: 26px;
+  color:#e5e6e6;
+}
+}
+@media (min-width: 300px)and (orientation:landscape){
+  
+.menu-container{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.menu-container::-webkit-scrollbar {
+    width: 1em;
+}
+.menu-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+  background-color:  #1fb5ad;
+  outline: 1px solid slategrey;
+}
+.menu-container{
+    margin: 0 0 0 20px;
+    margin-top: 22px;
+    max-height: 119px;
+    clear: both;
+    overflow-y: auto;
+}
+.template-logo {
+    margin: 2px 0 20px -72px;}
+.logo1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 21px;}
+.logo {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 47px;}
+.homepage-title {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+}
+.single-liner{
+  font-size: 26px;
+  color:#e5e6e6;
+}
+}
+
+@media (min-width: 768px){
+ 
+.songs,.poems{
+      margin-top: 40px;
+}
+.sort{
+      width: 45px;}
+
+  .recent-reads{
+        margin-left: 263px;
+        margin-top: 50px;
+    max-height: 330px;
+    overflow-y: auto;
+  }
+  .recent-poems{
+        margin-left: 120px;
+        margin-top: 30px;
+    max-height: 330px;
+    overflow-y: auto;
+  }
+.logo {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 60px;}
+.logo1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 23px;}
+.template-logo {
+    margin: 28px 0 28px -70px;}
+.menu-container {
+    margin: 0 0 0 20px;
+    margin-top: 45px;
+max-height:inherit;
+clear: both;
+    position: relative;
+}
+ .homepage-title{
+    position: fixed;
+       top: 47%;
+        left: 20%;
+    
+    
+}
+.single-liner{
+  font-size: 44px;
+  color:#e5e6e6;
+}
+}
+
+#social {
+
+    margin-top: 16px;
+}
+.text1 {
+  margin-top: 29px;
+}
+}
+@media (min-width: 300px) and (orientation:landscape) and (max-width: 992px) {
+#navbar{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#navbar::-webkit-scrollbar {
+    width: 1em;
+}
+#navbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#navbar::-webkit-scrollbar-thumb {
+  background-color:  #1fb5ad;
+  outline: 1px solid slategrey;
+}
+
+}
+
+.menu-container a{
+  color: rgb(255, 255, 255);
+}
+.menu-background{
+  height:100%;
+  background-image: url(/assets/Dark-Floral-Pattern-background.jpg);
+
+}
+.container{
+  height:100%;
+ overflow-x: hidden;
+}
+.logo1{
+ 
+  /* letter-spacing: 1px; */
+  color: #777777;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  margin-left: -11px;
+}
+.logo{
+  
+  /* letter-spacing: 1px; */
+  color: #8D9090;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  margin-left: -11px;
+}
+/* contact_us page styling*/
+.contactphn,.contactmail,.owner-name{font-family: 'Abhaya Libre', serif;
+font-size: 18px;
+/* letter-spacing: 1px; */
+color:#1b1b1b;
+overflow: hidden;
+text-decoration: none;
+outline: none;
+}
+.owner-name{
+  font-size: 20px;
+}
+.owner-details{
+  position: absolute; right: 0; bottom: 0; width: 274px; height: 200px;
+}
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:2px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+textarea.form-control {
+    height: 104px;
+}
+#main-slider{padding-left: 0px;
+padding-right: 0px;
+padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;}
+#gmap_canvas{width: 100%;
+    float: right;
+    box-shadow: -9px 5px 5px #464646;}
+    @media (min-width: 300px){
+      #gmap_canvas{height: 220px;
+}
+
+}
+@media (min-width: 300px)and (orientation:landscape){
+#gmap_canvas{height: 220px;
+}
+}
+
+#gmap_canvas{height: 340px;
+}
+.big{
+  width:100%;
+  height:100%;
+}
+}
+
+.map{
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.slide{width:100%;
+margin-left: -23px;
+    margin-top: -22px;}
+
+.inner-div{
+  position: absolute;
+  width: 790px;
+  margin: 73px;
+  margin-left: 185px;height: 541px;
+  background-color: rgba(167, 165, 164, 0.72);
+      box-shadow: 10px 5px 5px 5px #464646;
+      z-index: 1;
+position: fixed;}
+.outer-div{
+  background-color: rgba(167, 165, 164, 0.72);
+  height:500px;
+  box-shadow: 10px 0px 5px #464646;
+  }
+
+
+
+    /*about us page styling*/
+    .logo3{
+      font-family: 'Abhaya Libre', serif;
+    font-size: 19px;
+    /* letter-spacing: 1px; */
+    color: #777777;
+    margin-top: -23px;
+    text-decoration: none;
+    outline: none;
+    margin-left: -11px;
+  text-align: justify;}
+    hr.flare {
+      height: 50px;
+      border-style: ridge;
+      border-color: #777777;
+      border-width: 2px 0 0 0;
+      border-radius: 45px;
+      margin-left: -20px;
+    }
+    hr.flare:before {
+      display: block;
+      content: "";
+      height: 50px;
+      margin-top: -51px;
+      border-style: ridge;
+      border-color: #777777;
+      border-width: 0 0 2px 0;
+      border-radius: 45px;
+    }
+    .wrapp{
+      margin-left: -19px;
+      margin-top: 26px;
+    }
+    .wrap{
+      height:80px;
+      margin-left: -31px;
+      margin-top: 37px;
+      margin-right: 57px;
+    }
+    .logo{
+      
+      /* letter-spacing: 1px; */
+      color: #8D9090;;
+
+      text-decoration: none;
+      outline: none;
+      margin-left: -14px;
+    }
+    .logo1{
+      
+      /* letter-spacing: 1px; */
+      color: #777777;
+
+      text-decoration: none;
+      outline: none;
+      margin-left: -11px;
+      margin-top: -15px;
+      text-align: justify;
+    }
+    .wrapper2{
+
+      /* float: left; */
+      /* width: 51%; */
+      height: 100%;
+      /* margin-left: 277px; */
+      /* position: fixed; */
+      z-index: -1;
+      background-color: whitesmoke;
+      box-shadow: 10px 0px 5px #46464;
+  }
+  .wrapper1 {
+    height: 100%;
+    /* width: 26%; */
+    /* position: fixed; */
+    z-index: -1;
+    /* margin-left: 978px; */
+}
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+    height:100vh;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+.activity-table{
+  border:1px solid rgb(141, 144, 144);
+  padding:5px;
+  margin:10px;
+}
+.lyrics-container-wrapper{
+  margin-top: 40px;
+}
+.activity-table:hover{
+background:rgb(235, 236, 236);
+}
+.filter{
+  font-family: 'Abhaya Libre', serif;
+    font-size: 23px;
+    color: #777777;
+}
+
+      .selected{
+       background:#1fb5ad;
+        }
+        .poem_div{height: 241px;
+            overflow-y: scroll;}
+            .recent{
+              overflow-y: hidden;
+            }
+.recents{
+  overflow-y: hidden;
+}
+.recent-reads{border-left: 4px solid #1fb5ad;
+   border-right: 4px solid #1fb5ad;}
+.recent-poem-container{
+  border-left: 4px solid #1fb5ad;
+   border-right: 4px solid #1fb5ad;
+   padding: 15px;
+}
+.recent-title{
+  font-size: 30px;
+  margin-left: 2px;
+}
+.homepage{
+ background-image: url(/assets/final.png);
+  background-repeat:no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}

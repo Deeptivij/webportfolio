@@ -1,0 +1,18 @@
+<%= form_for(@video) do |f| %>
+    <div class="col-md-6">
+        <%= f.label :company %><br />
+        <%= f.text_field :link, class: 'form-control', required: true %>
+        <span class="help-block">A link to the video on YouTube.</span>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+    <%= f.fields_for :description do |ff| %>
+    <%= ff.label :singer %>
+    <%= ff.text_field :singer %>
+    <%= ff.label :composer %>
+    <%= ff.text_field :composer %>
+    <%= ff.label :location %>
+    <%= ff.text_field :location %>
+    <% end %>
+  <% end %>

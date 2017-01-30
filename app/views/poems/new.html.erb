@@ -1,0 +1,10 @@
+<%= form_for(@poem) do |f| %>
+    <div class="col-md-6">
+        <%= f.label :company %><br />
+        <%= f.text_field :link, class: 'form-control', required: true %>
+        <span class="help-block">A link to the poem  on YouTube channel.</span>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+  <% end %>

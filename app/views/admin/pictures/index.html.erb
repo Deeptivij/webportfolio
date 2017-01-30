@@ -1,0 +1,21 @@
+
+<div class="col-md-12">
+<% if @pictures.any? %>
+    <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10 gallery polaroid">
+<% @pictures.in_groups_of(3) do |group| %>
+              <% group.each do |p| %>
+                <% if p %>
+                  <div>
+              <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 photoplace view view-first">
+                <%= image_tag(p.image.url, class: 'media-object',title: p.description)%>
+                <div class="mask">
+                    <p align="center"><%= p.description %></p>
+                </div>
+             </div>
+                <% end %>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+<% end %>
+</div>

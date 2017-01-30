@@ -1,0 +1,26 @@
+
+<% if @videos.any? %>
+
+    <div id="player-wrapper"class="col-md-9 col-xs-9 col-sm-9 col-lg-9 text-center"></div>
+    <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 playlist">
+<% @videos.in_groups_of(3) do |group| %>
+              <% group.each do |video| %>
+                <% if video %>
+                  <div>
+              <div class="yt_video thumbnail col-md-12 col-xs-12 col-sm-12 col-lg-12 picture">
+                <%= link_to (image_tag "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                              class: 'yt_preview img-rounded', :"data-uid" => video.uid),"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+               <div class="caption">
+                  <p class="captions">Singer: <b><%= video.description.singer%></b></p>
+                  <p class="captions">Composer: <b><%= video.description.composer%></b></p>
+                    <p class="captions">Location: <b><%= video.description.location%></b></p>
+                      <p class="captions">Lyrics: <b>Kajendra Sj&auml;l Srivastva</b></p>
+                </div>
+              </div>
+                <% end %>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+<% end %>
+</div>

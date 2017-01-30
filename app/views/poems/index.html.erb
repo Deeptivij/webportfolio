@@ -1,0 +1,24 @@
+<% if @poems.any? %>
+
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+<% @poems.in_groups_of(2) do |group| %>
+              <div class="row">
+              <% group.each do |video| %>
+              
+                <% if video %>
+              <div class="photoplace view view-first col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+                 <%= link_to (image_tag "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                              class: 'media-object', :"data-uid" => video.uid),"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+              </div>
+          <div class="col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+               <p class="captions"><%=video.title%></p>
+                      <p class="captions">Lyrics: <b>Kajendra Sj&auml;l Srivastva</b></p>
+                </div>    
+                <% end %>
+       
+        <% end %>
+     </div>
+    <% end %>
+  </div>
+<% end %>
+

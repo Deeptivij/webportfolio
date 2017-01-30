@@ -1,0 +1,67 @@
+
+<% if @videos.any?||@poems.any?%>
+<div class="row">
+<div class="col-md-12 col-xs-10 col-sm-10 col-lg-12">
+<%= bootstrap_form_tag url:lyrics_path, method: :get, remote: true,html: {class: 'read-search'} do |f| %>
+                 <input type = "radio" id = "sort_ri" name = "sort_project" 
+                 value = "songs" checked = "checked" class="sort"/>
+                <%= f.label :sort_by, "Songs",class:'filter' %> 
+                <input type = "radio" id = "sort_ra" name = "sort_project" 
+                 value = "poems" class="sort"/>
+                <%= f.label :sort_by, "Poems",class:'filter'%></span>
+                <input type = "radio" id = "sort_ra" name = "sort_project" 
+                 value = "events" class="sort"/>
+                <%= f.label :sort_by, "Events",class:'filter'%></span>
+                <%end%>
+</div>
+</div>
+    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+    <div class="songs">
+<% @videos.in_groups_of(2) do |group| %>
+              <div class="row">
+              <% group.each do |video| %>
+              
+                <% if video %>
+              <div class="photoplace view view-first col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+                 <%= link_to (image_tag "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                              class: 'media-object', :"data-uid" => video.uid),"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+              </div>
+          <div class="col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+               <p class="captions"><%=video.title%></p>
+                  <p class="captions">Singer: <b><%= video.description.singer%></b></p>
+                  <p class="captions">Composer: <b><%= video.description.composer%></b></p>
+                    <p class="captions">Location: <b><%= video.description.location%></b></p>
+                      <p class="captions">Lyrics: <b>Kajendra Sj&auml;l Srivastva</b></p>
+                </div>    
+                <% end %>
+       
+        <% end %>
+     </div>
+    <% end %>
+ <%= will_paginate @videos %>
+    </div>
+    <div class="poems hide">
+<% @poems.in_groups_of(2) do |group| %>
+              <div class="row">
+              <% group.each do |video| %>
+              
+                <% if video %>
+              <div class="photoplace view view-first col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+                 <%= link_to (image_tag "https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                              class: 'media-object', :"data-uid" => video.uid),"https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+              </div>
+          <div class="col-md-3 col-xs-12 col-sm-12 col-lg-3 ">
+               <p class="captions"><%=video.title%></p>
+                      <p class="captions">Lyrics: <b>Kajendra Sj&auml;l Srivastva</b></p>
+                </div>    
+                <% end %>
+       
+        <% end %>
+     </div>
+    <% end %>
+     <%= will_paginate @poems %>
+    </div>
+  </div>
+<% end %>
+
+
